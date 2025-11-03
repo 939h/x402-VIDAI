@@ -26,7 +26,7 @@ app.use(
     {
       // Protected endpoint for authentication
       "GET /authenticate": {
-        price: "$1.00", // Set your desired price
+        price: "$0.10", // Set your desired price
         network: network,
       },
     },
@@ -72,4 +72,5 @@ export default app;
 const PORT = process.env.PORT || 4021;
 app.listen(PORT, () => {
   log(`Server is running on http://localhost:${PORT}`);
+
 });
