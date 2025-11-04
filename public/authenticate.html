@@ -1,162 +1,169 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="alternate icon" href="favicon.ico" />
-    
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
-    <!-- HTML Meta Tags -->
-    <title>Processing Payment | x402 Video Paywall</title>
-    <meta name="description" content="Processing your secure USDC micropayment via x402 protocol." />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mint x402BASEHINT</title>
 
-    <!-- Facebook Meta Tags -->
-    <meta property="og:url" content="https://x402.enlomy.xyz/" />
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="Processing Payment | x402 Video Paywall" />
-    <meta property="og:description" content="Processing your secure USDC micropayment via x402 protocol." />
-    <meta
-      property="og:image"
-      content="https://opengraph.b-cdn.net/production/images/afea1e83-0adf-4492-9692-599da59e6182.png?token=nH7qEiqQ28Fyw91we3XTwxZpqk3vbIeIl3hjVfsNpHQ&height=266&width=500&expires=33297677916"
-    />
+  <!-- Inter font -->
+  <link rel="preconnect" href="https://rsms.me/">
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
-    <!-- Twitter Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta property="twitter:domain" content="x402.enlomy.xyz" />
-    <meta property="twitter:url" content="https://x402.enlomy.xyz/" />
-    <meta name="twitter:title" content="Processing Payment | x402 Video Paywall" />
-    <meta name="twitter:description" content="Processing your secure USDC micropayment via x402 protocol." />
-    <meta
-      name="twitter:image"
-      content="https://opengraph.b-cdn.net/production/images/afea1e83-0adf-4492-9692-599da59e6182.png?token=nH7qEiqQ28Fyw91we3XTwxZpqk3vbIeIl3hjVfsNpHQ&height=266&width=500&expires=33297677916"
-    />
-  </head>
-  <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-      <div class="nav-container">
-        <div class="nav-brand">
-          <i class="fas fa-lock-open"></i>
-          <span>x402 Paywall</span>
-        </div>
-        <div class="nav-links">
-          <a href="https://www.x402.org/" target="_blank" class="nav-link">
-            <i class="fas fa-info-circle"></i> About x402
-          </a>
-          <a href="https://github.com/enlomy/x402-micropayments" target="_blank" class="nav-link">
-            <i class="fab fa-github"></i> GitHub
-          </a>
-        </div>
-      </div>
-    </nav>
+  <style>
+    :root {
+      --blue: #0066ff;
+      --blue-hover: #0052cc;
+      --bg: #1a1a1a;           /* dark grey background */
+      --card-bg: #ffffff;
+      --text: #e0e0e0;
+      --text-dark: #0a0a0a;
+      --shadow: 0 12px 32px rgba(0,0,0,.35);
+      --icon-deco: rgba(0,102,255,.09);
+    }
 
-    <!-- Payment Processing Section -->
-    <section class="hero" style="min-height: 70vh; display: flex; align-items: center;">
-      <div class="hero-content">
-        <div class="hero-badge">
-          <i class="fas fa-sync-alt fa-spin"></i>
-          <span>Processing Payment</span>
-        </div>
-        <h1 class="hero-title">
-          Securing Your <span class="gradient-text">Transaction</span>
-        </h1>
-        <p class="hero-description">
-          Your $0.10 USDC payment is being processed on the Base network. This should only take a moment.
-        </p>
+    * { margin:0; padding:0; box-sizing:border-box; }
 
-        <!-- Payment Processing Card -->
-        <div class="feature-card" style="max-width: 600px; margin: 2rem auto; text-align: center;">
-          <div class="payment-processing">
-            <div class="loader" style="margin: 2rem auto;"></div>
-            <h3 style="margin-top: 1.5rem; margin-bottom: 1rem; color: var(--primary);">
-              <i class="fas fa-shield-alt"></i> Payment in Progress
-            </h3>
-            <p style="margin-bottom: 0.75rem;">
-              <i class="fas fa-check-circle" style="color: var(--success);"></i> 
-              Connecting to Base network...
-            </p>
-            <p style="margin-bottom: 0.75rem;">
-              <i class="fas fa-check-circle" style="color: var(--success);"></i> 
-              Processing USDC transaction...
-            </p>
-            <p style="margin-bottom: 1.5rem;">
-              <i class="fas fa-hourglass-half" style="color: var(--warning);"></i> 
-              Awaiting blockchain confirmation...
-            </p>
-            <div class="hero-stats" style="margin-bottom: 1.5rem;">
-              <div class="stat-item">
-                <i class="fas fa-lock"></i>
-                <span>Secure Payment</span>
-              </div>
-              <div class="stat-item">
-                <i class="fas fa-bolt"></i>
-                <span>Base Network</span>
-              </div>
-              <div class="stat-item">
-                <i class="fas fa-dollar-sign"></i>
-                <span>$0.10 USDC</span>
-              </div>
-            </div>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-              <i class="fas fa-info-circle"></i> 
-              Please do not close this window. You will be redirected automatically.
-            </p>
-          </div>
-          
-          <a href="/" class="cta-button secondary">
-            <i class="fas fa-times"></i>
-            Cancel Payment
-          </a>
-        </div>
-      </div>
-    </section>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:1rem;
+      position:relative;
+      overflow:hidden;
+    }
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>x402 Video Paywall</h4>
-          <p>A demonstration of micropayment-powered content access using the x402 protocol on Coinbase Base.</p>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="https://www.x402.org/" target="_blank"><i class="fas fa-chevron-right"></i> x402 Protocol</a></li>
-            <li><a href="https://github.com/enlomy/x402-micropayments" target="_blank"><i class="fas fa-chevron-right"></i> GitHub Repository</a></li>
-            <li><a href="https://www.coinbase.com/" target="_blank"><i class="fas fa-chevron-right"></i> Coinbase</a></li>
-          </ul>
-        </div>
-        
-        <div class="footer-section">
-          <h4>Connect</h4>
-          <div class="social-links">
-            <a href="https://github.com/enlomy/x402-micropayments" target="_blank" class="social-link" title="GitHub">
-              <i class="fab fa-github"></i>
-            </a>
-            <a href="https://t.me/enlomy" target="_blank" class="social-link" title="Telegram">
-              <i class="fab fa-telegram"></i>
-            </a>
-            <a href="https://www.x402.org/" target="_blank" class="social-link" title="x402">
-              <i class="fas fa-globe"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>&copy; <span id="current-year"></span> Enlomy. Built with <i class="fas fa-heart"></i> for the decentralized web.</p>
-      </div>
-    </footer>
-    
-    <script>
-      // Dynamically update the year
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-    </script>
-  </body>
+    /* Decorative icons (non-functional) */
+    .deco {
+      position:absolute;
+      font-size:2.8rem;
+      color:var(--icon-deco);
+      pointer-events:none;
+      user-select:none;
+      opacity:0.6;
+    }
+    .deco:nth-child(1){top:10%;left:7%;}       /* blockchain cube */
+    .deco:nth-child(2){top:14%;right:10%;}     /* layer group (Base) */
+    .deco:nth-child(3){bottom:16%;left:8%;}    /* wallet */
+    .deco:nth-child(4){bottom:10%;right:7%;}   /* globe */
+    .deco:nth-child(5){top:42%;left:4%;}       /* twitter */
+    .deco:nth-child(6){top:45%;right:5%;}      /* github */
+
+    .card {
+      background:var(--card-bg);
+      color:var(--text-dark);
+      padding:3rem 2.3rem;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      text-align:center;
+      max-width:400px;
+      width:100%;
+      position:relative;
+      z-index:10;
+      transition:transform .25s ease;
+    }
+    .card:hover { transform:translateY(-6px); }
+
+    h1 {
+      font-size:1.8rem;
+      font-weight:700;
+      margin-bottom:.6rem;
+      color:#0f0f0f;
+    }
+    p {
+      font-size:1.05rem;
+      color:#444;
+      margin-bottom:1.9rem;
+      line-height:1.5;
+    }
+
+    .pay-button {
+      background:var(--blue);
+      color:#fff;
+      border:none;
+      padding:18px 40px;
+      font-size:1.12rem;
+      font-weight:600;
+      border-radius:16px;
+      cursor:pointer;
+      width:100%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      transition:all .25s ease;
+      box-shadow:0 6px 16px rgba(0,102,255,.3);
+    }
+    .pay-button:hover:not(:disabled){
+      background:var(--blue-hover);
+      transform:translateY(-2px);
+      box-shadow:0 8px 20px rgba(0,102,255,.4);
+    }
+    .pay-button:disabled{
+      background:#666;
+      cursor:not-allowed;
+      box-shadow:none;
+      transform:none;
+    }
+
+    .icon {font-size:1.3em;}
+    .spinner {animation:spin 1s linear infinite;}
+    @keyframes spin{to{transform:rotate(360deg);}}
+
+    /* Inter font fallback */
+    html { font-family: 'Inter', sans-serif; }
+    @supports (font-variation-settings: normal) {
+      html { font-family: 'Inter var', sans-serif; }
+    }
+  </style>
+
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+</head>
+<body>
+
+  <!-- Decorative icons (non-functional) -->
+  <i class="deco fas fa-cube"></i>
+  <i class="deco fas fa-layer-group"></i>
+  <i class="deco fas fa-wallet"></i>
+  <i class="deco fas fa-globe"></i>
+  <i class="deco fab fa-twitter"></i>
+  <i class="deco fab fa-github"></i>
+
+  <div class="card">
+    <h1>Mint x402BASEHINT</h1>
+    <p>Mint <strong>5,000 x402BASEHINT</strong> for <strong>1 USDC</strong> on Base</p>
+
+    <button id="payButton" class="pay-button">
+      <i class="fas fa-wallet icon"></i>
+      <span>Connect Wallet & Mint</span>
+    </button>
+  </div>
+
+  <script>
+    const btn = document.getElementById('payButton');
+
+    btn.addEventListener('click', async () => {
+      btn.disabled = true;
+      btn.innerHTML = `<i class="fas fa-spinner spinner icon"></i><span>Processing Mint…</span>`;
+
+      try {
+        // === YOUR x402 MINT LOGIC HERE ===
+        // await mintX402BaseHint(5000, 1); // Replace with real call
+        await new Promise(r => setTimeout(r, 2500)); // DEMO
+
+        alert('Mint successful! 5,000 x402BASEHINT added.');
+        // window.location = '/dashboard';
+
+      } catch (e) {
+        btn.disabled = false;
+        btn.innerHTML = `<i class="fas fa-redo icon"></i><span>Try Again</span>`;
+        console.error('Mint failed:', e);
+      }
+    });
+  </script>
+</body>
 </html>
